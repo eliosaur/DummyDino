@@ -13,9 +13,6 @@ public class MyKeyListener implements KeyListener{
             p.jump = true;
             p.jump();
          }
-         if (e.getKeyCode() == KeyEvent.VK_N){
-            System.out.println("Hello!");
-         }
     }
     @Override
     public void keyTyped(KeyEvent e) { 
