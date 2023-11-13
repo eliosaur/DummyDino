@@ -1,19 +1,17 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class MyKeyListener implements KeyListener{
-    int i = 0;
-    MyPanel p;
+public class MyKeyListener extends MyPanel implements KeyListener{
+
     @Override
     public void keyPressed(KeyEvent e) {
-         if (e.getKeyCode() == KeyEvent.VK_SPACE){
+         if (e.getKeyCode() == KeyEvent.VK_SPACE && !jump){ 
+            //jump == false to prevent 2nd jumping while in air
             i++;
-            System.out.println("Jumped! " + i);
-            p = new MyPanel();
-            p.jump = true;
-            p.jump();
+            jump();
          }
     }
+
     @Override
     public void keyTyped(KeyEvent e) { 
     }
