@@ -13,7 +13,7 @@ public class MyPanel extends JPanel implements ActionListener {
 	int xVelocity = 5;
 	int yVelocity = 1;
 	int x = -20;
-	int y = 150;
+	int y = 105;
 	public int i = 0;
 	boolean jump = false;
 
@@ -23,7 +23,7 @@ public class MyPanel extends JPanel implements ActionListener {
 		dino = new ImageIcon("textures\\dino.png").getImage();
 		backgroundImage = new ImageIcon("textures\\background.jpg").getImage();
 		timer = new Timer(10, this);
-		timer.start();
+		//timer.start();
 	}
 
 	public void paint(Graphics g) {
@@ -43,7 +43,6 @@ public class MyPanel extends JPanel implements ActionListener {
 	}
 
 	public void jumphandling() {
-		/*
 		if (jump) {
 			// going up
 			if(y >= -20) {
@@ -67,24 +66,24 @@ public class MyPanel extends JPanel implements ActionListener {
 			}
 		}
 
-		 */
-
 		// TO ANIMATE (this is working)
+		/* 
 		if (y + yVelocity > y) {
 			// going down
 			yVelocity = 15;
 		} else {
 			// going up
-			yVelocity = -10;
+			yVelocity = -10; //-10 original
 		}
 
-		if (y < -200 || y > 157) {
+		if (y < -200 || y > 105) {
 			yVelocity = yVelocity * -1;
 			jump = false;
 			// (PANEL_HEIGHT + 150)-enemy.getHeight(null) a basis for other things
 		}
 
 		y = y + yVelocity;
+		*/
 	}
 
 	@Override
